@@ -23,8 +23,5 @@ public class ex1010 {
 
 			System.out.println((int)result);
 		}
-		
-		
-
 	}
 }
