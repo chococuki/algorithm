@@ -1,4 +1,4 @@
-package com.ssafy.backjoon;
+package exam;
 
 import java.io.*;
 import java.util.StringTokenizer;
