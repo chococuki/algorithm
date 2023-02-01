@@ -22,7 +22,7 @@ public class Main {
 		}
 	}
 	
-	public static void dfs(int x, int y) {
+	public static void bfs(int x, int y) {
 		int now_x, now_y;
 		
 		que.add(new Node(x, y));
@@ -67,7 +67,7 @@ public class Main {
 		
 		visit = new boolean[N+1][M+1];
 		visit[1][1] = true;
-		dfs(1, 1);
+		bfs(1, 1);
 		
 		System.out.println(board[N][M]);
 		
