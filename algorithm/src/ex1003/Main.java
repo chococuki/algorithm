@@ -1,8 +1,8 @@
-package exam;
+package ex1003;
 
 import java.io.*;
 
-public class ex1003 {
+public class Main {
 	
 	static int[][] arr = new int[41][2];
 	static int zerosum = 0;
