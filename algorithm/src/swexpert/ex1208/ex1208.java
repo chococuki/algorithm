@@ -1,4 +1,4 @@
-package swexpert;
+package swexpert.ex1208;
 
 import java.io.BufferedReader;
 import java.io.IOException;
