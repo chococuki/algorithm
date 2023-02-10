@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
-public class Main {
+public class Memory {
 	static int n;
 	static boolean[] numbers;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
