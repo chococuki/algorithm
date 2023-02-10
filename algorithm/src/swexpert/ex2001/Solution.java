@@ -58,12 +58,12 @@ public class Solution {
 				}
 			}
 			
-//			for(int i=0; i<(N-M+1); i++) {
-//				for(int j=0; j<(N-M+1); j++) {
-//					System.out.print(result[i][j]+" ");
-//				}
-//				System.out.println();
-//			}
+/*			for(int i=0; i<(N-M+1); i++) {
+				for(int j=0; j<(N-M+1); j++) {
+					System.out.print(result[i][j]+" ");
+				}
+				System.out.println();
+			}*/
 			
 			System.out.println("#"+test_case+" "+max);
 		}
