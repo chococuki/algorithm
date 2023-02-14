@@ -39,7 +39,7 @@ public class Main {
 		} while(!((new_x-1)== start && new_y == start));
 		arr[new_x][new_y] = tmp;
 //		System.out.println("-----");
-		if(start<(N/2)) rotate(start+1);
+		if(start<(N/2) && start<(M/2)) rotate(start+1);
 	}
 	
 	public static void main(String[] args) throws IOException {
@@ -60,6 +60,7 @@ public class Main {
 		}
 		
 		for(int i=0; i<R; i++) {
+//			System.out.println(i);
 			isrotate = new boolean[N+1][M+1];
 			rotate(1);
 		}
