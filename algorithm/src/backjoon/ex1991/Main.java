@@ -11,8 +11,6 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class Main {
-	static Deque<String> que = new LinkedList<>();
-	static Stack<String> stack = new Stack<>();
 	static Map<String, Child> map = new LinkedHashMap<>();
 	static StringBuilder sb;
 	
@@ -28,19 +26,20 @@ public class Main {
 	
 	public static String case1() {
 		sb = new StringBuilder();
-		stack.push("A");
 		
-		String cur, left, right;
-		while(!stack.isEmpty()) {
-			cur = stack.pop();
-			sb.append(cur);
-			left = map.get(cur).left;
-			right = map.get(cur).right;
-			
-			if(!right.equals(".")) stack.push(right);
-			if(!left.equals(".")) stack.push(left);
-		}
+		case1plus("A");
+		
 		return sb.toString();
+	}
+	
+	public static void case1plus(String cur) {
+		sb.append(cur);
+		if(!map.get(cur).left.equals(".")) {
+			case1plus(map.get(cur).left);
+		}
+		if(!map.get(cur).right.equals(".")) {
+			case1plus(map.get(cur).right);
+		}
 	}
 	
 	public static String case2() {
