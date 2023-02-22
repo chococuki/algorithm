@@ -22,8 +22,22 @@ public class Main {
 		}
 	}
 	
+	private static int find() {
+		int day = 0;
+		while(!que.isEmpty()) {
+			day++;
+			quetmp = new LinkedList<>(que);
+			que = new LinkedList<>();
+			int fin = quetmp.size();
+			for(int i=0; i<fin; i++) {
+				Node node = quetmp.poll();
+				bfs(node);
+			}
+		}
+		return day;
+	}
 	
-	static void find(Node node) {
+	static void bfs(Node node) {
 		int now_x, now_y;
 		
 		for(int i=0; i<4; i++) {
@@ -39,7 +53,7 @@ public class Main {
 		}
 	}
 	
-	static boolean find0() {
+	static boolean yummy() {
 		for(int i=0; i<N; i++) {
 			for(int j=0; j<M; j++) {
 				if(board[i][j] == 0)
@@ -70,21 +84,11 @@ public class Main {
 				}
 			}
 		}
-		int count = 0;
-		while(!que.isEmpty()) {
-			count++;
-			quetmp = new LinkedList<>(que);
-			que = new LinkedList<>();
-			int fin = quetmp.size();
-			for(int i=0; i<fin; i++) {
-				Node node = quetmp.poll();
-				find(node);
-			}
-			
-		}
-		if(find0())
+		int day = find();
+		
+		if(yummy())
 			System.out.println(-1);
 		else
-			System.out.println(count-1);
+			System.out.println(day-1);
 	}
 }
